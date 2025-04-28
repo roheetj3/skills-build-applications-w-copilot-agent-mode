@@ -28,7 +28,11 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = ['*']
 CORS_ALLOW_METHODS = ['*']
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "skills-build-applications-w-copilot-agent-mode-8000.app.github.dev",
+]
 
 # Application definition
 INSTALLED_APPS = [
