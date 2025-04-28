@@ -1,4 +1,4 @@
-use octofit_db
+// Ensure you are connected to the 'octofit_db' database before running these commands
 
 db.createCollection("users")
 db.createCollection("teams")
