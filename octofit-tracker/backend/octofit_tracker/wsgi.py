@@ -4,13 +4,21 @@ WSGI config for octofit_tracker project.
 It exposes the WSGI callable as a module-level variable named ``application``.
 
 For more information on this file, see
+<<<<<<< HEAD
 https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/
+=======
+https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/
+>>>>>>> 9d8d899 (Populate octofit_db with test data, add test_octofit_data.py, and update management command)
 """
 
 import os
 
 from django.core.wsgi import get_wsgi_application
 
+<<<<<<< HEAD
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "octofit_tracker.settings")
+=======
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'octofit_tracker.settings')
+>>>>>>> 9d8d899 (Populate octofit_db with test data, add test_octofit_data.py, and update management command)
 
 application = get_wsgi_application()

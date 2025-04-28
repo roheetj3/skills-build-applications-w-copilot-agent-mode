@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 """
 URL configuration for octofit_tracker project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
+=======
+"""octofit_tracker URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/3.1/topics/http/urls/
+>>>>>>> 9d8d899 (Populate octofit_db with test data, add test_octofit_data.py, and update management command)
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -14,6 +21,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+<<<<<<< HEAD
 
 from django.urls import path, include
 from rest_framework import routers
@@ -29,5 +37,22 @@ router.register(r'workouts', views.WorkoutViewSet)
 urlpatterns = [
     path('', views.api_root, name='api-root'),
     path('admin/', include('django.contrib.admin.urls')),
+=======
+from django.contrib import admin
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import UserViewSet, TeamViewSet, ActivityViewSet, LeaderboardViewSet, WorkoutViewSet, api_root
+
+router = DefaultRouter()
+router.register(r'users', UserViewSet)
+router.register(r'teams', TeamViewSet)
+router.register(r'activities', ActivityViewSet)
+router.register(r'leaderboard', LeaderboardViewSet)
+router.register(r'workouts', WorkoutViewSet)
+
+urlpatterns = [
+    path('', api_root, name='api-root'),
+    path('admin/', admin.site.urls),
+>>>>>>> 9d8d899 (Populate octofit_db with test data, add test_octofit_data.py, and update management command)
     path('api/', include(router.urls)),
 ]
